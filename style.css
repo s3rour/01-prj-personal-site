@@ -1,1 +1,295 @@
-/* Add you CSS here */
+/* Simple styles for a soft blue portfolio website */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #1f324f;
+  background-color: #eef5fb;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.site-header {
+  background-color: #d7e7f4;
+  color: #1f324f;
+  padding: 40px 0;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.site-header h1 {
+  margin: 0 0 10px;
+  font-size: 2.4rem;
+}
+
+.site-header p {
+  margin: 0;
+  max-width: 600px;
+}
+
+.hero-image-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 10px 20px rgba(31, 50, 79, 0.12);
+}
+
+.main-nav {
+  margin-top: 24px;
+}
+
+.main-nav a {
+  color: #1f324f;
+  text-decoration: none;
+  margin: 0 10px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.main-nav a:hover {
+  background-color: rgba(82, 119, 179, 0.16);
+  border-color: rgba(31, 50, 79, 0.2);
+}
+
+.section-card {
+  background-color: #f7fbff;
+  border-radius: 24px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 6px 18px rgba(31, 50, 79, 0.08);
+}
+
+.section-card h2 {
+  margin-top: 0;
+  display: inline-block;
+  background-color: #d8e8ff;
+  padding: 12px 18px;
+  border-radius: 999px;
+  box-shadow: 0 6px 12px rgba(31, 50, 79, 0.1);
+}
+
+.skill-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(140px, 1fr));
+  gap: 12px;
+}
+
+.skill-item {
+  background-color: #dceaf6;
+  padding: 20px;
+  border-radius: 18px;
+  
+  /* 1. Turn the item into a flex container */
+  display: flex;
+  /* 2. Center vertically (along the cross axis) */
+  align-items: center;
+  /* 3. Center horizontally (along the main axis) */
+  justify-content: center;
+  
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  font-weight: bold;
+  position: relative;
+  overflow: hidden;
+  min-height: 100px;
+  transition: transform 0.25s ease, background-color 0.25s ease;
+}
+
+.skill-item:hover {
+  background-color: #c5dbf0;
+}
+
+.skill-item span {
+  position: relative;
+  z-index: 2;
+}
+
+.skill-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 8px 20px rgba(31, 50, 79, 0.14);
+  opacity: 0.35;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+  transform: translate(-50%, -50%);
+}
+
+.skill-icon:hover {
+  transform: translate(-50%, -50%) scale(1.25);
+  opacity: 0.75;
+}
+
+.skill-c .skill-icon {
+  animation: skill-float-c 22s ease-in-out infinite;
+}
+
+.skill-css .skill-icon {
+  animation: skill-float-css 24s ease-in-out infinite;
+}
+
+.skill-html .skill-icon {
+  animation: skill-float-html 26s ease-in-out infinite;
+}
+
+.skill-lua .skill-icon {
+  animation: skill-float-lua 20s ease-in-out infinite;
+}
+
+.skill-python .skill-icon {
+  animation: skill-float-python 28s ease-in-out infinite;
+}
+
+@keyframes skill-float-c {
+  0% { transform: translate(-50%, -50%) translate(0, 0) scale(1); }
+  18% { transform: translate(-50%, -50%) translate(30px, -20px) scale(1.03); }
+  38% { transform: translate(-50%, -50%) translate(-35px, 20px) scale(1.04); }
+  58% { transform: translate(-50%, -50%) translate(20px, 35px) scale(1.02); }
+  78% { transform: translate(-50%, -50%) translate(-25px, -30px) scale(1.03); }
+  100% { transform: translate(-50%, -50%) translate(0, 0) scale(1); }
+}
+
+@keyframes skill-float-css {
+  0% { transform: translate(-50%, -50%) translate(0, 0) scale(1); }
+  20% { transform: translate(-50%, -50%) translate(-30px, 25px) scale(1.02); }
+  44% { transform: translate(-50%, -50%) translate(25px, -30px) scale(1.03); }
+  63% { transform: translate(-50%, -50%) translate(-15px, -35px) scale(1.01); }
+  83% { transform: translate(-50%, -50%) translate(35px, 15px) scale(1.04); }
+  100% { transform: translate(-50%, -50%) translate(0, 0) scale(1); }
+}
+
+@keyframes skill-float-html {
+  0% { transform: translate(-50%, -50%) translate(0, 0) scale(1); }
+  20% { transform: translate(-50%, -50%) translate(40px, 15px) scale(1.03); }
+  45% { transform: translate(-50%, -50%) translate(-45px, -15px) scale(1.02); }
+  70% { transform: translate(-50%, -50%) translate(20px, -35px) scale(1.04); }
+  100% { transform: translate(-50%, -50%) translate(0, 0) scale(1); }
+}
+
+@keyframes skill-float-lua {
+  0% { transform: translate(-50%, -50%) translate(0, 0) scale(1); }
+  18% { transform: translate(-50%, -50%) translate(-35px, 40px) scale(1.03); }
+  42% { transform: translate(-50%, -50%) translate(30px, -30px) scale(1.02); }
+  68% { transform: translate(-50%, -50%) translate(18px, -42px) scale(1.04); }
+  100% { transform: translate(-50%, -50%) translate(0, 0) scale(1); }
+}
+
+@keyframes skill-float-python {
+  0% { transform: translate(-50%, -50%) translate(0, 0) scale(1); }
+  20% { transform: translate(-50%, -50%) translate(45px, 20px) scale(1.02); }
+  45% { transform: translate(-50%, -50%) translate(-40px, -35px) scale(1.03); }
+  70% { transform: translate(-50%, -50%) translate(25px, -40px) scale(1.04); }
+  100% { transform: translate(-50%, -50%) translate(0, 0) scale(1); }
+}
+
+.activity-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  justify-content: space-between;
+}
+
+.activity-card {
+  background-color: #ffffff;
+  padding: 18px;
+  border-radius: 24px;
+  border: 1px solid #d8e4ef;
+  transition: transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex: 1 1 280px;
+  min-width: 240px;
+}
+
+.activity-card:hover {
+  transform: translateY(-2px);
+}
+
+.activity-image {
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+  border-radius: 18px;
+  object-fit: cover;
+}
+
+.activity-card h3 {
+  margin: 0 0 8px;
+}
+
+.activity-card p {
+  margin: 0;
+}
+
+.hover-scale {
+  transition: transform 0.35s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+.site-footer {
+  background-color: #2c3d63;
+  color: #e7edf7;
+  text-align: center;
+  padding: 18px 0;
+}
+
+.site-footer a {
+  color: #dce9fb;
+}
+
+@media (max-width: 800px) {
+  .header-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-image {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .main-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .main-nav a {
+    margin: 5px;
+  }
+
+  .skill-list {
+    grid-template-columns: 1fr;
+  }
+}

@@ -2,10 +2,95 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Personal Site</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Add your HTML content here -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div>
+        <h1>Christopher Serour</h1>
+        <p>Web development student building projects with a calm, modern style.</p>
+        <nav class="main-nav">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#activities">Activities</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+      <div class="hero-image-wrap">
+        <img class="hero-image hover-scale" src="img/me.jpg" alt="Portrait illustration">
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="about" class="section-card">
+      <h2>About Me</h2>
+      <p>Hello! I am a web development student working on portfolio projects for my college course. I am currently learning HTML and CSS and I am excited to share the websites I create.</p>
+    </section>
+
+    <section id="skills" class="section-card">
+      <h2>Programming Languages</h2>
+      <ul class="skill-list">
+        <li class="skill-item skill-c">
+          <span>C</span>
+          <img class="skill-icon hover-scale" src="img/c.png" alt="C icon">
+        </li>
+        <li class="skill-item skill-lua">
+          <span>LUA</span>
+          <img class="skill-icon hover-scale" src="img/lua.png" alt="Lua icon">
+        </li>
+        <li class="skill-item skill-css">
+          <span>CSS</span>
+          <img class="skill-icon hover-scale" src="img/css.png" alt="CSS icon">
+        </li>
+        <li class="skill-item skill-html">
+          <span>HTML</span>
+          <img class="skill-icon hover-scale" src="img/html.png" alt="HTML icon">
+        </li>
+        <li class="skill-item skill-python">
+          <span>Python</span>
+          <img class="skill-icon hover-scale" src="img/python.png" alt="Python icon">
+        </li>
+      </ul>
+    </section>
+
+    <section id="activities" class="section-card">
+      <h2>Favorite Activities</h2>
+      <div class="activity-grid">
+        <article class="activity-card">
+          <img class="activity-image hover-scale" src="img/laptop.jpg" alt="Activity preview">
+          <h3>Software Engineering</h3>
+          <p>Simply creating websites and developing softwares.</p>
+        </article>
+        <article class="activity-card">
+          <img class="activity-image hover-scale" src="img/spotify.jpg" alt="Activity preview">
+          <h3>Music</h3>
+          <p>A relaxing way to spend my time that also helps me stay on track whenever I need a lot of focus.</p>
+        </article>
+        <article class="activity-card">
+          <img class="activity-image hover-scale" src="img/riding.jpg" alt="Activity preview">
+          <h3>Motocross</h3>
+          <p>I'm practically in the woods every weekend trying to go as fast as possible.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="section-card">
+      <h2>Contact</h2>
+      <p>Want to connect? Send me an email or find me on social media as I continue learning.</p>
+      <p><strong>Email:</strong> <a href="mailto:you@example.com">cserour@usf.edu</a></p>
+      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/christopher-serour" target="_blank">https://www.linkedin.com/in/christopher-serour-9332a8346/</a></p>
+      <p><strong>Phone Number:</strong> <a href="tel:123-456-7890">727-656-0633</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 My Portfolio. Built with simple HTML and CSS.</p>
+    </div>
+  </footer>
 </body>
 </html>
