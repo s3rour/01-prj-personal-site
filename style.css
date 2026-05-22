@@ -292,4 +292,24 @@ body {
   .skill-list {
     grid-template-columns: 1fr;
   }
+
+  .activity-grid {
+    flex-direction: column;
+  }
+
+  .activity-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .activity-image {
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    margin-bottom: 14px;
+  }
+
+  .activity-card h3 {
+    margin-bottom: 8px;
+  }
 }
